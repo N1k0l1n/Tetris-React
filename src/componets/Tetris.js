@@ -16,6 +16,7 @@ import { useGameStatus } from '../hooks/useGameStatus';
 import { useInterval } from '../hooks/useInterval';
 
 
+
 const Tetris = () => {
   const [dropTime, setDropTime] = useState(null);
   const [gameOver, setGameOver] = useState(false);
@@ -89,7 +90,6 @@ const Tetris = () => {
 
   const move = ({ keyCode }) => {
     if (!gameOver) {
-      //For more see https://www.foreui.com/articles/Key_Code_Table.htm
       if (keyCode === 37) {
         movePlayer(-1);
       } else if (keyCode === 39) {

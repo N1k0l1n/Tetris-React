@@ -12,4 +12,22 @@ export const StyledStage = styled.div`
   width: 100%;
   max-width: 25vw;
   background: #111;
+
+  @media (max-width: 768px) {
+    /* Adjust the grid layout for smaller screens */
+    grid-template-rows: repeat(
+      ${props => props.height},
+      calc(50vw / ${props => props.width})
+    );
+    max-width: 50vw;
+  }
+
+  @media (max-width: 480px) {
+    /* Further adjustments for smaller screens */
+    grid-template-rows: repeat(
+      ${props => props.height},
+      calc(75vw / ${props => props.width})
+    );
+    max-width: 75vw;
+  }
 `;
